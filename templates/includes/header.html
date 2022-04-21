@@ -1,0 +1,37 @@
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html">RECTECH</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="active" href="{% url 'home'%}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'team' %}">Our Team</a></li>
+
+          <li class="dropdown"><a href="#"><span>Courses</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="#">Engineering</a></li>
+                  <li class="dropdown"><a href="#"><span>B.Tech</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                  {% for category in links %}
+                  <li><a class="nav-link " href="{{category.get_url}}">{{category.category_name }}</a></li>
+                  {% endfor %}
+
+                </ul>
+                  </li>
+
+                </ul>
+              </li>
+              <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
+
+
+      <a href="courses.html" class="get-started-btn">Register/Login</a>
+
+    </div>
+  </header><!-- End Header -->
