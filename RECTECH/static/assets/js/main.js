@@ -34,7 +34,7 @@
   }
 
   /**
-   * Easy on scroll event listener 
+   * Easy on scroll event listener
    */
   const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
@@ -127,3 +127,9 @@
   });
 
 })()
+
+
+
+setTimeout(function(){
+  $('#message').fadeOut('slow')
+}, 4000)
