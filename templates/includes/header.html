@@ -38,7 +38,7 @@
 
       {% else %}
 
-      <a href="{% url 'logout'%}" class="get-started-btn">logout</a>
+      <a href="{% url 'profile'%}" class="get-started-btn">{{user.first_name}}</a>
 
       {% endif %}
 

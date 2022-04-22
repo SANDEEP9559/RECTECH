@@ -5,12 +5,13 @@
 {% load static %}
 <!-- ========================= SECTION CONTENT ========================= -->
 <link href="{% static 'assets/css/bootstrap.css'%}" rel="stylesheet" type="text/css"/>
+
 <section class="section-content padding-y">
 
 <!-- ============================ COMPONENT REGISTER   ================================= -->
 	<div class="card mx-auto" style="max-width:720px; margin-top:40px;">
       <article class="card-body">
-        {% include 'includes/alerts.html'%}
+        
 
 		<center><header class="mb-4"><h4 class="card-title">Sign up</h4></header></center>
 		<form action="{% url 'register' %}" method="POST">
